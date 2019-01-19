@@ -31,13 +31,13 @@ function TODOS(tag, name, option)
 %Author: Marc Jakobi, 14.10.2016
 
 %% Check inputs
-if nargin < 1
+if nargin < 1 || isempty(tag)
     tag = 'TODO';
 end
-if nargin < 2
+if nargin < 2 || isempty(name)
     name = cd;
 end
-if nargin < 3
+if nargin < 3 || isempty(option)
     option = 'subdirs';
 end
 if ~iscell(tag) % cast to cell array to avoid indexing problems
